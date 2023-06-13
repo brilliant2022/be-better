@@ -1,0 +1,28 @@
+      body{background-image: url(./picture/圖片1.jpg);
+           font-family: 'Noto Sans TC', sans-serif;
+           color:	#743A3A;}
+      body::after{background-color: rgba(255, 255, 255, 0.5);}
+      footer{background-color:	#FFDAC8;}
+      #better{position: absolute;
+         left: 50%;
+         transform: translate(-50%);}
+      #train {position: absolute;
+            height: 100px;
+            left: 5px;
+            animation: train 7s linear infinite;
+          }
+          
+          @keyframes train {
+            from {
+              left: 80%;
+            }
+            to {
+              left: 0%;
+            }
+          }
+          p{font-weight: 600;}
+          li{font-weight: 600;}
+          @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap');
+
+
+      

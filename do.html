@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>To-do List</title>
+    <link rel="stylesheet" href="./css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+    href="http://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body onload="date();">
+    <nav class="navbar navbar-inverse" id="top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+              <a class="navbar-brand" href="./index.html">Be better 自我提升</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="./bmi.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg>BMI計算</a></li>
+              <li><a href="./one.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg>每日一句</a></li>
+              <li><a href="./water.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg></span>傾訴天地</a></li>
+              <li><a href="./book.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg>好書推薦</a></li>
+              <li><a href="./do.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg> To-do List</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li> <a href="#" id="demo"></a></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <img src="./picture/2.jpg" height="100px" id="better"><br><br><br><br><br><br>
+      <div class="container-fluid">
+          <img src="./picture/fl1.jpg" height="350px" width="1415px" class="img-responsive img-rounded" >
+      </div>
+       <br>
+       <img src="./picture/3.jpg" id="train">
+      <br><br><br><br>
+      <div class="container">
+        <div id="myDialog" ><p id="goo"></p></div>
+     <h1 align="center">To-do List</h1>
+     <p>列清单是一种记录待办事项的方法，可以帮助人们更好地规划工作、明确工作重点和目标。它通常是由一个清单或者一个表格组成，将需要完成的任务列出来，并按照不同的优先级和截止时间进行排序。</p>
+    <p>列清单可以涵盖各种待办事项，如学习任务、工作任务、日常生活事务、健身计划等等。通过列清单，人们可以清楚地了解自己需要完成哪些任务，可以更好地控制自己的时间和精力，并且能够提高任务完成的质量和效率。</p>
+     <br><br>
+     <p>列表清單可以是一個簡單的紙張清單或者是一個電子版的清單。它可以是手寫的、打印出來的，或者是在電子設備上建立的，如手機應用、電腦軟體等。無論採用何種形式，列表都是一種簡單而有效的工具，可以幫助
+        人們更好地規劃和組織自己的工作和生活，提供，高工作效率和工作質量，降低焦耳和壓力，增強自我管理和自律性。</p><br><br>
+     <p>是否有許多代辦事項要做，卻總是在有時間的時候忘記你要做什麼？</p>
+     <p>透過To-do List可以將自己臨時要做的事情記錄下來，或是可以在睡覺前想想隔天要做的事項。</p>
+     <p>讓我們開始使用吧！</p><br>
+     
+     <p>
+        <label>待辦事項：<input id="thing" type="text" placeholder="輸入待辦事項"></label>
+        <button onclick="add();">新增</button>
+     </p>
+     <p>&rarr;<u>若完成待辦事項，可在下方已輸入之事務點擊一下。若要恢復未完成請連續點擊兩下。</u></p>
+     <p>&hearts;待辦事務</p>
+     <span id="list" onclick="exi(event);" ondblclick="del(event)"></span>
+    
+     </div><br><br>
+     <p align="center"><a href="#top"><b>回頂頁</b></a></p>
+     <footer>
+        <div id="pu" class="col-sm-4">
+          <br><img src="./picture/better.jpg" height="150px">
+          <p>copyright(c)&ensp;&copy;YA-WEN,LIN</p>
+          </div>
+        <div id="footer" class="col-sm-4">
+          <div class="container-fluid">
+            <div class="row">
+              <br>
+              <p>fllow us</p>
+              <a href="https://instagram.com/_wonderful_bri0510?igshid=Yjk4NWM2ZWVkMw==">
+              <img src="./picture/ig.jpg" height="40px"></a><br><br>
+              <a href="https://www.facebook.com/profile.php?id=100004271351499&mibextid=ZbWKwL">
+              <img src="./picture/f.jpg" height="36px"></a><br><br>
+              <img src="./picture/heart.jpg" height="15px">
+              <span>您的鼓勵是我們進步的動力</span>
+              <img src="./picture/heart.jpg" height="15px">
+       </div>
+       </div>
+       </div>
+       <div id="cen" class="row">
+        <div class="col-sm-4">
+          <br>
+          <p>contact us</p>
+          <img src="./picture/mail.jpg" height="25px">
+          <span>&ensp;Wendy24062516@gmail.com</span><br><br>
+          <a href="mailto:Wendy24062516@gmail.com">聯絡信箱</a><br><br>
+          <img src="./picture/phone.jpg" height="30px">
+          <span>&ensp;+886-6-2757575</span><br><br>
+          <a href="tel:+886-6-2757575">連絡電話</a>
+       </div>
+       </div>
+      <br>
+      </footer>
+     <script>
+      $('#myDialog').dialog({autoOpen:false,
+                            draggable:false,
+                            modal:true,
+                            resizable:false});
+        function add(){
+            var list = document.getElementById('list');
+            var thing=document.getElementById('thing');
+            if (thing.value==""){
+              $( "#myDialog" ).dialog( "open" );
+              $('#goo').text("請輸入待辦事項");
+            }
+            else{
+              list.innerHTML+='<span>•\t'+thing.value+'</span><br>';
+              var v = document.getElementById('thing');
+              v.value='';
+            }
+            
+        }
+        function exi(event){
+            var x=event.target;
+            console.log(x);
+            event.target.style.textDecoration = "line-through";    
+        }
+        function del(event){
+            var x =event.target;
+            event.target.style.textDecoration="none";
+        }
+            function date(){
+            var d = new Date();
+            document.getElementById("demo").innerHTML=d.toLocaleTimeString();
+            inter=setInterval(date,1000);
+        }
+     </script>
+</body>
+</html>

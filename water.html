@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>傾訴天地</title>
+    <link rel="stylesheet" href="./css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+    href="http://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body onload="date();">
+    <nav class="navbar navbar-inverse" id="top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+              <a class="navbar-brand" href="./index.html">Be better 自我提升</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="./bmi.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg>BMI計算</a></li>
+              <li><a href="./one.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg>每日一句</a></li>
+              <li><a href="./water.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg></span>傾訴天地</a></li>
+              <li><a href="./book.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg>好書推薦</a></li>
+              <li><a href="./do.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+              </svg> To-do List</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li> <a href="#" id="demo"></a></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <img src="./picture/2.jpg" height="100px" id="better"><br><br><br><br><br><br>
+      <div class="container-fluid">
+          <img src="./picture/fl1.jpg" height="350px" width="1415px" class="img-responsive img-rounded" >
+      </div>
+       <br>
+       <img src="./picture/3.jpg" id="train">
+      <br><br><br><br>
+      <div class="container">
+       <p>每個人都需要被人傾聽，因為這是一種基本的人類需求，有利於促進個人的情感和心理健康。以下是一些原因：</p><br>
+       <ol>
+        <li>減輕情緒負擔：當人們遇到情感困惑和煩惱時，有人願意傾聽和理解他們的情況，可以減輕他們的情緒負擔，緩解他們的壓力和痛苦。</li><br><br>
+        <li>提高自尊心和信心：被傾聽和理解可以讓人感受到被重視和認可，這有助於提高個人的自尊心和信心，有利於積極應對生活中的挑戰和困難。</li><br><br>
+        <li>促進交流和理解：人們的想法和觀點經常因為語言表達的不清楚或者溝通障礙而導致理解的困難。傾聽和理解別人的觀點可以促進交流和理解，有助於建立良好的人際關係。</li><br><br>
+        <li>建立信任和親密感：當人們被傾聽和理解時，他們會感到被信任和被關心，這可以建立信任和親密感，促進更緊密和更有意義的人際關係。</li><br>
+       </ol>
+       <p>總之，被人傾聽和理解是一種情感和心理上的需求，可以促進個人的健康和幸福。</p>
+       <br>
+       <form method="post" action="http://httpbin.org/post">
+        <h1>talk about...</h1>
+        <label>你想分享的主題：<input type="text" placeholder="topic"></label><br><br>
+        <label>你的名字(小名即可)：<input type="text" placeholder="how to address you"></label><br><br>
+        <label>是否公開分享：<input name="en" type="radio">是
+          <input name="en" type="radio">否</label><br><br>
+        <label>請輸入日期：<input id="dd"></label><br><br>
+        <label>你的mail： <input type="email" placeholder="mail"></label><br><br>
+        <label>你的小小心事：<textarea cols="100" rows="10"></textarea></label><br><br>
+        <label>其他想說的話：<textarea cols="100" rows="5"></textarea></label><br><br>
+        <input type="submit" value="完成">
+        <input type="reset" value="清除">
+        <p>&hearts;&hearts;也歡迎你來信到下方郵件中，成為傾聽你的一員&hearts;&hearts;</p>
+       </form>
+       <br><br>
+       <p>若您還是感到情緒低落，可以嘗試以下幾種方式：</p>
+       <ul>
+        <li>與親友交流：與親友分享自己的感受和情緒，可以緩解孤獨感和壓力，同時也可以得到支持和鼓勵。</li><br>
+        <li>運動和鍛鍊：適度的運動和鍛鍊可以釋放身體的壓力和負面情緒，同時也有助於釋放身體內的有益化學物質，如內啡肽和多巴胺。</li><br>
+        <li>深呼吸和冥想：通過深呼吸和冥想可以放松身心，減少負面情緒和壓力，同時也有助於提高注意力和專注力。</li><br>
+        <li>培養愛好：尋找一些感興趣的活動或愛好，可以轉移注意力，緩解壓力和焦慮。</li><br>
+        <li>尋求專業幫助：如果情緒低落嚴重或持續時間較長，可以尋求專業的心理咨詢或治療幫助。心理專業人士可以提供個人化的建議和治療方案，幫助人們克服情緒困擾和心理障礙。</li>
+       </ul>
+       </div>
+       <br><br>
+       <p align="center"><a href="#top"><b>回頂頁</b></a></p>
+       <footer>
+        <div id="pu" class="col-sm-4">
+          <br><img src="./picture/better.jpg" height="150px">
+          <p>copyright(c)&ensp;&copy;YA-WEN,LIN</p>
+          </div>
+        <div id="footer" class="col-sm-4">
+          <div class="container-fluid">
+            <div class="row">
+              <br>
+              <p>fllow us</p>
+              <a href="https://instagram.com/_wonderful_bri0510?igshid=Yjk4NWM2ZWVkMw==">
+              <img src="./picture/ig.jpg" height="40px"></a><br><br>
+              <a href="https://www.facebook.com/profile.php?id=100004271351499&mibextid=ZbWKwL">
+              <img src="./picture/f.jpg" height="36px"></a><br><br>
+              <img src="./picture/heart.jpg" height="15px">
+              <span>您的鼓勵是我們進步的動力</span>
+              <img src="./picture/heart.jpg" height="15px">
+       </div>
+       </div>
+       </div>
+       <div id="cen" class="row">
+        <div class="col-sm-4">
+          <br>
+          <p>contact us</p>
+          <img src="./picture/mail.jpg" height="25px">
+          <span>&ensp;Wendy24062516@gmail.com</span><br><br>
+          <a href="mailto:Wendy24062516@gmail.com">聯絡信箱</a><br><br>
+          <img src="./picture/phone.jpg" height="30px">
+          <span>&ensp;+886-6-2757575</span><br><br>
+          <a href="tel:+886-6-2757575">連絡電話</a>
+       </div>
+       </div>
+      <br>
+      </footer>
+     <script>
+            function date(){
+            var d = new Date();
+            document.getElementById("demo").innerHTML=d.toLocaleTimeString();
+            inter=setInterval(date,1000);
+        }
+        $('#dd').datepicker({ dateFormat: 'yy/mm/dd(D)',
+                              changeMonth:true,
+                              changeYear:true,
+                              showOtherMonths:true,
+                              showAnim:'slideDown'});
+     </script>
+</body>
+</html>

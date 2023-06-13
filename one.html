@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>每日一句</title>
+    <link rel="stylesheet" href="./css.css">
+    <script src="./story.js"></script>
+    <link rel="stylesheet" href="./css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body onload="date();">
+  <nav class="navbar navbar-inverse" id="top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+          <a class="navbar-brand" href="./index.html">Be better 自我提升</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="./bmi.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+          </svg>BMI計算</a></li>
+          <li><a href="./one.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+          </svg>每日一句</a></li>
+          <li><a href="./water.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+          </svg></span>傾訴天地</a></li>
+          <li><a href="./book.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+          </svg>好書推薦</a></li>
+          <li><a href="./do.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
+          </svg> To-do List</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li> <a href="#" id="demo"></a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <img src="./picture/2.jpg" height="100px" id="better"><br><br><br><br><br><br>
+  <div class="container-fluid">
+      <img src="./picture/fl1.jpg"  height="350px" width="1415px" class="img-responsive img-rounded" >
+  </div>
+   <br>
+   <img src="./picture/3.jpg" id="train">
+  <br><br><br><br>
+  <div class="container">
+  <p>聆聽每日一句可以帶來以下好處：</p>
+  <ol>
+    <li>提供靈感：每日一句可以為我們提供一些靈感和啟示，使我們更加積極和有動力地面對生活和工作。</li><br>
+    <li>提高思考能力：每日一句可以為我們提供新的思考角度和思維方式，幫助我們拓展思路和提高思考能力。</li><br>
+    <li>幫助學習語言：每日一句可以幫助我們學習新的詞匯和語言表達方式，提高語言能力和閱讀能力。</li><br>
+    <li>增加知識儲備：每日一句可以為我們提供一些新的知識和見解，從而增加我們的知識儲備和文化素養。</li><br>
+    <li>提高情緒管理能力：每日一句可以為我們提供積極的思想和心理暗示，幫助我們調節情緒和提高情緒管理能力。</li><br>
+  </ol>
+  <p>現在的你是否需要每日一句來讓你打打氣呢？</p>
+  <p>快來試試你的運氣</p>
+  <p>記得每日不多不少，剛好就一句喔</p>
+    <button id="btn" onclick="randArray();">立即抽取</button>
+    <h2>每日一句：</h2>
+    <h2>&nbsp;&nbsp;<span id="div"></span></h2>
+    </div><br><br>
+    <p align="center"><a href="#top"><b>回頂頁</b></a></p>
+    <footer>
+      <div id="pu" class="col-sm-4">
+        <br><img src="./picture/better.jpg" height="150px">
+        <p>copyright(c)&ensp;&copy;YA-WEN,LIN</p>
+        </div>
+      <div id="footer" class="col-sm-4">
+        <div class="container-fluid">
+          <div class="row">
+            <br>
+            <p>fllow us</p>
+            <a href="https://instagram.com/_wonderful_bri0510?igshid=Yjk4NWM2ZWVkMw==">
+            <img src="./picture/ig.jpg" height="40px"></a><br><br>
+            <a href="https://www.facebook.com/profile.php?id=100004271351499&mibextid=ZbWKwL">
+            <img src="./picture/f.jpg" height="36px"></a><br><br>
+            <img src="./picture/heart.jpg" height="15px">
+            <span>您的鼓勵是我們進步的動力</span>
+            <img src="./picture/heart.jpg" height="15px">
+     </div>
+     </div>
+     </div>
+     <div id="cen" class="row">
+      <div class="col-sm-4">
+        <br>
+        <p>contact us</p>
+        <img src="./picture/mail.jpg" height="25px">
+        <span>&ensp;Wendy24062516@gmail.com</span><br><br>
+        <a href="mailto:Wendy24062516@gmail.com">聯絡信箱</a><br><br>
+        <img src="./picture/phone.jpg" height="30px">
+        <span>&ensp;+886-6-2757575</span><br><br>
+        <a href="tel:+886-6-2757575">連絡電話</a>
+     </div>
+     </div>
+    <br>
+    </footer>
+    <script>
+        function randArray(){
+            var myArray=story.split(",");
+            var rand = Math.floor(Math.random()*myArray.length);
+            var rValue = myArray[rand];
+            document.getElementById("div").innerHTML=rValue
+
+        }
+            function date(){
+            var d = new Date();
+            document.getElementById("demo").innerHTML=d.toLocaleTimeString();
+            inter=setInterval(date,1000);
+        }
+
+    </script>
+</body>
+</html>
